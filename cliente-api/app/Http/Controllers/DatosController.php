@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\Http;
 class DatosController extends Controller
 {
     public function Listar(Request $request){
-        $usuarioLoggeado = "";
-        if($request->session()->get('autenticado') == true)
-            $usuarioLoggeado = $request->session()->get('nombreUsuario');
-
-        
+              
         $response = Http::get('http://localhost:8000/api/datos');
         $datos = json_decode($response,true);
 
