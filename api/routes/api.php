@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DatosController;
+use App\Http\Controllers\EmailController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +17,4 @@ use App\Http\Controllers\DatosController;
 
 Route::get('/datos',[DatosController::class,"Listar"]);
 Route::post('/login',[DatosController::class,"Login"]);
+Route::post('/email',[EmailController::class,"EnviarMail"]);
